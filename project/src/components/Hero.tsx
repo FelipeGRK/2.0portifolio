@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { Download, Github, Linkedin, ChevronDown } from 'lucide-react';
+import { Eye, Github, Linkedin, ChevronDown } from 'lucide-react';
 import { profile } from '@/data';
 
 export default function Hero() {
@@ -30,6 +30,15 @@ export default function Hero() {
       <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-b from-transparent to-ink-950" />
 
       <div className="section-container relative z-10 flex flex-col items-center text-center">
+        {/* Profile picture */}
+        <div className="animate-fade-in mb-8 h-32 w-32 overflow-hidden rounded-full border-2 border-accent-500/50 bg-ink-850 shadow-lg shadow-accent-500/20">
+          <img
+            src="/assets/profile.jpg"
+            alt="Felipe Siqueira"
+            className="h-full w-full object-cover"
+          />
+        </div>
+
         {/* Status badge */}
         <div className="animate-fade-in mb-8 inline-flex items-center gap-2 rounded-full border border-ink-700 bg-ink-850/60 px-4 py-2 text-sm text-ink-200 backdrop-blur-sm">
           <span className="relative flex h-2 w-2">
@@ -59,9 +68,14 @@ export default function Hero() {
 
         {/* CTAs */}
         <div className="animate-fade-up animate-delay-500 flex flex-col items-center gap-4 sm:flex-row">
-          <a href={profile.resume} download className="btn-primary">
-            <Download className="h-4 w-4" />
-            Download Resume
+          <a
+            href={profile.resume}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn-primary"
+          >
+            <Eye className="h-4 w-4" />
+            View Resume
           </a>
           <a href="#projects" className="btn-ghost">
             View Projects
