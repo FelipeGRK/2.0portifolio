@@ -37,24 +37,6 @@ export type SkillCategory = {
 
 export const skillCategories: SkillCategory[] = [
   {
-    title: 'Front-End Development',
-    icon: 'Code2',
-    skills: [
-      'Semantic HTML5 markup & accessibility best practices',
-      'Responsive layouts with CSS Flexbox & Grid',
-      'Core JavaScript fundamentals (ES6+, control flow, functions)',
-      'Event-driven & asynchronous programming',
-      'Node.js scripting & npm package management',
-      'ReactNative',
-      'Rapid UI assembly using Bootstrap components',
-      'Cross-browser testing & DevTools debugging',
-      'Unit testing with Jest for reliable code',
-      'Git & GitHub',
-      'Modern front-end workflows & project structure',
-      'WCAG accessibility & semantic web principles',
-    ],
-  },
-  {
     title: 'Systems Administration',
     icon: 'Server',
     skills: [
